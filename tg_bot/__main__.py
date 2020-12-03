@@ -134,7 +134,8 @@ def start(bot: Bot, update: Update, args: List[str]):
                                     parse_mode=ParseMode.MARKDOWN,
                                     disable_web_page_preview=True,
                                     reply_markup=InlineKeyboardMarkup(
-                                        [[InlineKeyboardButton(text="Add me to your chat!", url="t.me/{}?startgroup=true".format(bot.username))]]))
+                                        [[InlineKeyboardButton(text="Add me to your Group", url="t.me/{}?startgroup=true".format(bot.username))],
+                                        [InlineKeyboardButton(text="Channel", url="https://t.me/ProIndians"), InlineKeyboardButton(text="Share", url="tg://msg?text=%2A%2AHello%2C%2A%2A%20Today%20I%20just%20found%20out%20an%20Intresting%20%2A%2AGroup%20Manager%20Bot%2A%2A%20for%20Free.%20%0A%2A%2ABot%20Link%20%3A%2A%2A%20%40ManagerProBot%20%F0%9F%A4%96")]]))
     else:
         update.effective_message.reply_text("Hello all Join @ProIndians.")
 
