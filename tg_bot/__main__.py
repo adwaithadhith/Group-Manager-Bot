@@ -364,15 +364,15 @@ def donate(bot: Bot, update: Update):
     chat = update.effective_chat  # type: Optional[Chat]
 
     if chat.type == "private":
-        update.effective_message.reply_text(DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
+        update.effective_message.reply_text(DONATE_STRING,
+                                            parse_mode=ParseMode.MARKDOWN,
+                                            disable_web_page_preview=True,
+                                            reply_markup=InlineKeyboardMarkup(
+                                                [[InlineKeyboardButton(text="Please Donate", url="https://github.com/FayasKKD/Donate")]]))
 
     else:
         try:
-            bot.send_message(user.id, DONATE_STRING,
-                             parse_mode=ParseMode.MARKDOWN,
-                             disable_web_page_preview=True,
-                             reply_markup=InlineKeyboardMarkup(
-                                 [[InlineKeyboardButton(text="Please Donate", url="https://github.com/FayasKKD/Donate")]]))
+            bot.send_message(user.id, DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
 
             update.effective_message.reply_text("I've PM'ed you about donating to my creator!")
         except Unauthorized:
