@@ -6,7 +6,7 @@
 
 ### Credits
 
-• [FayasKKD](https://github.com/FayasKKD/Bio) for this Repository 
+• [Fadwaithadhith](https://telegram./monster_fed_admin) for this Repository 
 
 • [Paul Larsen](https://github.com/PaulSonOfLars) for his [tgbot](https://github.com/PaulSonOfLars/tgbot) Repository.
 
